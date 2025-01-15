@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ambiyans Tekno Pedleri Hazırlama</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Ambiyans Tekno Pedleri Hazırlama</h1>
+
+    <p><em>Ambiyans tekno, atmosferik ses örüntülerini minimal vuruşlarla harmanlayarak 
+        sürükleyici ve meditatif deneyimler yaratır. Bu Sentez dersinde, <a href="https://www.fabfilter.com/products/twin-3-synthesizer-plug-in" target="_blank">FabFilter Twin 3</a> ve <a href="https://www.fabfilter.com/products/pro-r-2-reverb-plug-in" target="_blank">Pro-R 2 </a> kullanarak 
+        sıfırdan ambiyans tekno pedlerinin temel taşlarından birini oluşturacağız.</em></p>
+    
+    <p>Techno genellikle sert groovelar, hipnotik dört dörtlük davullar ve gece kulüpleriyle özdeşleştirilir. Bununla birlikte, çoğu elektronik müzikte olduğu gibi, ilişkili alt türler de mevcuttur. Bunlardan biri de ambiyans teknodur. Ruh hali ve duygular üzerine odaklanarak ses örüntülerini minimal perküsyonlarla birleştirir.</p>
+    
+    <p><i>Carl Craig, The Orb</i> ve <i>Aphex Twin</i> gibi birçok tanınmış sanatçı ambiyans tekno'nun popülerleşmesine yardımcı oldu, ancak <i>Lewis Fautzi, Polar Inertia ve Feral</i> gibi ambiyans tekno'nun sınırlarını zorlayan çok sayıda underground sanatçı da var.</p>
+    
+    <p>Bu Sentez dersimizde, FabFilter'ın oldukça mükemmel Twin 3'ünü kullanarak sıfırdan, adım adım bir ambiyans ped oluşturacağız. İsveçli plugin devinin sesi yumuşatmaya ve daha atmosferik hale getirmeye yardımcı olacak Pro-R 2 adlı bir aracı da var. Elbette, sadece bir ön ayar (preset) yükleyebilirsiniz, ancak sentezin kendisini bilmek gerçekten işe yarar, çünkü daha sonra 'neyin ne yaptığını' bilerek sesinizi daha verimli bir şekilde kontrol edebilirsiniz. Eğer ki sentezlemede kendi tarzınızı bulduğunuza inanıyor ve bu dersin sentez kısmına ihtiyacınız yoksa <a href="#drumandsidechain" style="color: blueviolet;">"Adım 9 - Davul ve Sidechain"</a> bölümüne göz atabilirsiniz.</p>
+    
+    <h2>Yaratacağımız ses için uygulamamız gereken adımlar:</h2>
+    
+    <h3><u>Adım 1 - Akorları Yazma</u></h3>
+    
+    <p>Tempoyu 128BPM'e ayarlıyoruz. Twin 3 VST'yi açıp “Clean” ön ayarını seçerek çalışmaya başlayabilirsiniz.</p>
+    
+    <p>Bir MIDI parçası oluşturun ve akorlar besteleyin. Mi Doryen (E Dorian) gamını kullanıyoruz ve bu son derece basit iki akorlu bir ilerlemedir.</p>
+    
+    <div style="text-align: center;"><img src="Adım-1.jpg" alt="Adım 1" width="500"></div>
+    
+    <h4><u>Adım 2 - Bu Akorlar Sessiz Kalmasın! - Osilatörler</u></h4>
+
+    <p>Osc 1 ile başlayın. Bir sinüs dalgası seçin ve +2 oktav'a getirin. Ses seviyesini -12dB'ye düşürün. Bu, sesin gövdesi için en yüksek frekans perdesini oluşturacaktır. Ardından, Osc 2'yi eklemek için + düğmesine tıklayın. 0 Oktava ayarlayın ve ses seviyesini -11dB'ye getirin. Bu, orta frekansları oluşturacaktır.</p>
+    
+    <p>Ardından, Osc 3'ü eklemek için + düğmesine tıklayın. Bunu +1 oktav olarak ayarlayın ve ses seviyesini -8dB'ye getirin. Bu, orta ila yüksek frekanslı sesler üretecektir. Son olarak, Osc 4'ü eklemek için + düğmesine son bir kez tıklayın. -1 oct olarak ayarlayın ve ses seviyesini -INFdb'ye yerleştirin. Bu, sese düşük frekanslı bir ağırlık sağlayacaktır.</p>
+    
+    <div style="text-align: center;"><img src="Adım-2.jpg" alt="Adım 2" width="500"></div>
+
+    <h4><u>Adım 3 - Zarf (Envelope) Zamanlamaları</u></h4>
+
+    <p>Ana zarf üretecine geçin ve aşağıdaki ayarlara indirin. Bu yavaş, kademeli zarf; ambiyans, ped benzeri sesler için harikadır. <br>
+
+        <ul> <li>Attack: 5sn (saniye)</li>
+        <li>Decay: 1.5sn</li>
+        <li>Sustain: -3dB</li>
+        <li>Release: 1sn</li></ul>
+    
+        <div style="text-align: center;"><img src="Adım-3.jpg" alt="Adım 3" width="500"></div>
+    
+    <blockquote><mark>Tavsiye: Attack ve Decay'e bir eğim ekleyin. Bu, şekli daha doğal hale getirecektir.</mark></blockquote>
+    
+    <h4><u>Adım 4 - Filtreler</u></h4>
+
+    <p>Filtre 1'in Low Pass olarak ayarlandığından emin olarak başlayın, 720Hz'e ayarlayın ve eğimi 24dB'ye ayarlayın. Bu, sert parlaklığı ortadan kaldıracaktır.</p>
+
+    <p>Ardından, Filtre 2'yi oluşturmak için çift tıklayın. Bunu High Pass olarak ayarlayın, 280Hz'e ayarlayın ve eğimi 24dB'ye ayarlayın.</p>
+
+    <p>Filtre 3'ü oluşturmak için tekrar çift tıklayın ve Low Shelf olarak değiştirin. 280Hz'e ayarlayın ancak eğimi Wide olarak ayarlayın. Son olarak, Filter Freq Offset'e geçin ve bunu -2 oktava düşürün. Filter Peak Offset'i %30'a yükseltin.</p>
+
+    <div style="text-align: center;"><img src="Adım-4.jpg" alt="Adım 4" width="500"></div>
+
+    <h5><u>Adım 5 - XLFO 1</u></h5>
+    
+    <p>XLFO klasik bir LFO (Düşük Frekanslı Osilatör) gibidir ancak çok daha güçlüdür. Normal bir LFO olabilir, ancak aynı zamanda her adım için ayrı bir kayma ayarına sahip 16 adımlı bir sekanslayıcıya dönüşebilir. Hadi kullanalım!</p>
+
+    <p>Modülasyon ekle düğmesine basın (GUI'nin sağ alt tarafına yakın A + düğmesi) ve yeni XLFO'yu seçin. İlk olarak, Osc 2 Sync'e yönlendirin. Ardından, Osc 2 Sync'i 2 olarak ayarlayın ve XLFO 1 Frekansını 13Hz olarak ayarlayın.</p>
+
+    <p style="color: crimson;">Ardından, yeni bir zarf üreteci oluşturun. Aşağıdaki gibi ayarlayın:</p>
+
+    <ul> <li>Attack: 12sn</li>
+        <li>Decay: 400msn (milisaniye)</li>
+        <li>Sustain: 0dB</li>
+        <li>Release: 2sn</li></ul>
+
+    <p>Bunu XLFO 1 Frekansına yönlendirin. Slot 4 seviyesini 0,5'e ayarlayın. Bu, LFO hızını modüle edecek, hızlı bir tempodan yumuşak bir şekilde daha yavaş bir tempoya geçecektir. Ayrıca XLFO1'i Osc 3 Sync'e yönlendirin ve Osc 3 Sync'i 2'ye ayarlayın. Son olarak, ilginç bir stereo genişliği oluşturmak için XLFO 1'i Filter 2 Pan'a yönlendirin.</p>
+    
+    <div style="text-align: center;"><img src="Adım-5.jpg" alt="Adım 5" width="500"></div>
+    
+    <h5><u>Adım 6 - XLFO 2</u></h5>
+
+    <p>İki tane varken neden bir taneyle yetinesiniz ki? Modülasyon ekle düğmesine basın ve bir kere daha XLFO'yu seçin. XLFO2'nin Frekansını 0,5 olarak ayarlayın. Osc 1 Sync'e yönlendirin ve Osc 1 Sync'i 2.0 olarak ayarlayın. EG2'yi önceki adımdan hem Osc 1 Senkronizasyonuna hem de Filtre 1 Frekansına yönlendirin.</p>
+
+    <p>XLFO 2'yi Filter Frequency Offset'e yönlendirin ve Slot 12 seviyesini 0.045'e ayarlayın. Bir kez daha, Slot 12'yi bu kadar düşük bir seviyeye ayarlamak seste ince değişiklikler yaratacaktır.</p>
+
+    <div style="text-align: center;"><img src="Adım-6.jpg" alt="Adım 6" width="500"></div>
+    
+    <h5><u>Adım 7 - Envelope Generator 3</u></h5>
+
+    <p>Evet, doğru tahmin ettiniz. Başka bir Zarf Üreteci! Modülasyon ekle düğmesine basın ve yeni bir zarf üreteci seçin. EG3'ün atağını 15 saniyeye ayarlayın. Geri kalan ayarların değiştirilmesine gerek yoktur. Şimdi Osc 4 Seviyesine yönlendirin. Ardından, XLFO 1'e dönün ve Osc 4 Sync'e yönlendirin. Son olarak, Osc 4 Sync'i 2.0 olarak ayarlayın.</p>
+
+    <p>Ve hazır buradayken, VST'nin soluna geçin. Delay'i bulun ve açın. Önce %50'ye ayarlayın. Feedback'i %70'e yükseltin ve ardından Ping Pong L-R moduna geçin.</p>
+
+    <div style="text-align: center;"><img src="Adım-7.jpg" alt="Adım 7" width="500"></div>
+    
+    <h5><u>Adım 8 - Efekt (FX) Kurulumu: Reverb</u></h5>
+
+    <p>Pro-R 2'yi doğrudan kanala yerleştirin. Ön ayar menüsünden Basic'i seçin. Stili Vintage moduna ayarlayın ve Character'i %100'e yükseltin.</p>
+
+    <p>Filtre 1'i Low Shelf olarak ayarlayın, 300Hz'e ayarlayın ve 9dB artırın. Son olarak, Karışımı %100 olarak ayarlayın. Bu, sese sıcak, gür bir doku verecektir.</p>
+
+    <div style="text-align: center;"><img src="Adım-8.jpg" alt="Adım 8" width="500"></div>
+    
+    <h6 id="drumandsidechain"><u>Adım 9 - Davul ve Sidechain</u></h6>
+
+    <p>Sadece kick ve shaker'dan oluşan bir drum rack ile basit bir davul düzeni oluşturun.</p>
+
+    <p>Twin 3 kanalına Ableton'un stok otomatik filtresini ekleyin. Filtrede, aşağı açılan oka basın, Sidechain'i açın ve davul rafından ses seçin ve kick, pre FX'i seçin.</p>
+
+    <p>Filtre zarfını 127'ye ayarlayın. Frekans daha sonra otomatikleştirilebilir ve tüm synth kick sesine göre pompalanır.</p>
+
+    <p>Son olarak, biraz perküsyon ekleyin ve istediğiniz gibi bir üst melodi oluşturun.</p>
+
+    <div style="text-align: center;"><img src="Adım-9.jpg" alt="Adım 9" width="500"></div>
+
+    <p style="font-size: 12px;padding-top: 30px;">Kanyak: https://www.attackmagazine.com/technique/synth-secrets/crafting-ambient-techno-pads/</p>
+
+    <!-- Yorumlarınızı ve açıklamalarınızı buraya ekleyebilirsiniz -->
+</body>
+</html>
